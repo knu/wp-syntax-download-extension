@@ -28,6 +28,8 @@ treated as valid and get preserved in the visual editor.  Add the
 
 You can alter the visual style of captions with CSS via admins menu. 
 
+This plug-in was tested with PHP 5.2.12 and won't work with PHP 4.
+
 == Installation ==
 
 1. Upload the `wp-syntax-download-extension` directory to the
