@@ -7,6 +7,8 @@ Version: 1.0.1
 Author: Akinori MUSHA
 Author URI: http://akinori.org/
 License: New BSD Licence
+Text Domain: wpsde
+Domain Path: languages
 */
 
 /*
@@ -316,7 +318,7 @@ HEADER
 </div>
 MESSAGE
                        ,
-                       htmlspecialchars(__('This plug-in does not work without WP-Syntax activated.')));
+                       htmlspecialchars(__('This plug-in does not work without WP-Syntax activated.', 'wpsde')));
         }
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -342,7 +344,7 @@ MESSAGE
 </div>
 MESSAGE
                                ,
-                               htmlspecialchars(__('Options saved.')));
+                               htmlspecialchars(__('Options saved.', 'wpsde')));
                 } else {
                         printf(<<< MESSAGE
 <div class="updated">
@@ -350,7 +352,7 @@ MESSAGE
 </div>
 MESSAGE
                                ,
-                               htmlspecialchars(__('Invalid form submission. (Reload or CSRF detected)')));
+                               htmlspecialchars(__('Invalid form submission. (Reload or CSRF detected)', 'wpsde')));
                 }
         }
 
@@ -380,12 +382,12 @@ FORM
                ,
                htmlspecialchars($wpsde_key),
                ($options['wpsde_disable_default_css'] == 't' ? ' checked="checked"' : ''),
-               htmlspecialchars(__('Disable default CSS')),
+               htmlspecialchars(__('Disable default CSS', 'wpsde')),
                htmlspecialchars(wpsde_default_css_url()),
-               htmlspecialchars(__('view')),
-               htmlspecialchars(__('User CSS')),
+               htmlspecialchars(__('view', 'wpsde')),
+               htmlspecialchars(__('User CSS', 'wpsde')),
                esc_html($options['wpsde_user_css']),
-               htmlspecialchars(__('Save Changes')));
+               htmlspecialchars(__('Save Changes', 'wpsde')));
 
         printf(<<< FOOTER
 </div>
@@ -398,6 +400,8 @@ if (preg_match(",^/([0-9]+)/(download/)?([^/]+)$,u", $_SERVER['PATH_INFO'], $mat
         require(dirname(__FILE__) . '/../../../wp-load.php');
         wpsde_process_download_request($matches[1], urldecode($matches[3]), !empty($matches[2]));
 } else {
+        load_plugin_textdomain('wpsde', false, dirname(plugin_basename(__FILE__)) . '/languages');
+
         if (!session_id())
                 session_start();
 
