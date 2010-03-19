@@ -1,0 +1,65 @@
+# Translation of the WordPress plugin WP-Syntax Download Extension 1.0.1 by Akinori MUSHA.
+# Copyright (C) 2010 Akinori MUSHA
+# This file is distributed under the same license as the WP-Syntax Download Extension package.
+# Akinori MUSHA <knu@iDaemons.org>, 2010.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WP-Syntax Download Extension 1.0.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/wp-syntax-download-extension\n"
+"POT-Creation-Date: 2010-03-19 13:12+0000\n"
+"PO-Revision-Date: 2010-03-19 13:12+0000\n"
+"Last-Translator: Akinori MUSHA <knu@iDaemons.org>\n"
+"Language-Team: Akinori MUSHA <knu@iDaemons.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: wp-syntax-download-extension.php:319
+msgid "This plug-in does not work without WP-Syntax activated."
+msgstr ""
+
+#: wp-syntax-download-extension.php:345
+msgid "Options saved."
+msgstr ""
+
+#: wp-syntax-download-extension.php:353
+msgid "Invalid form submission. (Reload or CSRF detected)"
+msgstr ""
+
+#: wp-syntax-download-extension.php:383
+msgid "Disable default CSS"
+msgstr ""
+
+#: wp-syntax-download-extension.php:385
+msgid "view"
+msgstr ""
+
+#: wp-syntax-download-extension.php:386
+msgid "User CSS"
+msgstr ""
+
+#: wp-syntax-download-extension.php:388
+msgid "Save Changes"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WP-Syntax Download Extension"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/extend/plugins/wp-syntax-download-extension"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Make WP-Syntax highlighted code snippets downloadable."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Akinori MUSHA"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://akinori.org/"
+msgstr ""
