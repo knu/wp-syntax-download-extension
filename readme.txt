@@ -54,6 +54,12 @@ Q.  This plug-in does not work with WP-Syntax _&lt;the latest
 A.  Bad surprise to me.  This plug-in depends on WP-Syntax's internals.
     Fix it yourself or wait until I fix it.
 
+Q.  How do you customize the styles of the code?
+
+A.  Amongst the options I am using the [WP-Syntax
+    Hacktify](http://wordpress.org/extend/plugins/wp-syntax-hacktify/)
+    plug-in.
+
 == Screenshots ==
 
 1. Output sample in the default style.
