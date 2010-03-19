@@ -112,6 +112,9 @@ function wpsde_html_body($doc) {
 }
 
 function wpsde_wp_syntax_before_filter($content) {
+        if (!function_exists('wp_syntax_substitute'))
+                return $content;
+
         return preg_replace_callback(
                 "/\s*(<pre(?:\s+(?:[^>]+)|\s*)>)(.*)?(<\/pre>)\s*/siU",
                 "wpsde_syntax_substitute",
@@ -184,6 +187,9 @@ function wpsde_syntax_substitute(&$match) {
 
 function wpsde_wp_syntax_after_filter($content) {
         global $wp_syntax_token;
+
+        if (!function_exists('wp_syntax_highlight'))
+                return $content;
 
         /*
          * Do stuff instead of wp_syntax_after_filter(), which has
@@ -302,6 +308,16 @@ function wpsde_options() {
 <h2>WP-Syntax Download Extension</h2>
 HEADER
                , '');
+
+        if (!function_exists('wp_syntax_highlight')) {
+                printf(<<< MESSAGE
+<div class="updated">
+<p><em style="color: red">%s</em></p>
+</div>
+MESSAGE
+                       ,
+                       htmlspecialchars(__('This plug-in does not work without WP-Syntax activated.')));
+        }
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $wpsde_key = $_SESSION['wpsde_key'];
