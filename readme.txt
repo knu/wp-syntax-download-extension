@@ -14,11 +14,11 @@ This plug-in adds download facility to WP-Syntax, putting a pretty
 caption to each syntax highlighted code snippet, which contains a
 permalink anchor and a couple of action buttons: "raw" and "download".
 
-The usage is easy.  You just put an attibute filename="..." to a <pre>
+The usage is easy.  You just put an attibute filename="..." to a &lt;pre&gt;
 element and the snippet will have a caption.
 
 I strongly recommend that you use the "TinyMCE Valid Elements" plug-in
-to make the non-standard <pre> element's attributes valid and
+to make the non-standard &lt;pre&gt; element's attributes valid and
 preserved in the visual editor.  Add the "pre" element, and its
 attributes "class", "dir", "escaped", "filename", "id", "lang",
 "line", "style", "title", and "wrap".
@@ -32,19 +32,19 @@ You can alter the visual style of captions with CSS via admins menu.
 
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
-3. Add an attribute filename="filename.ext" to the <pre lang="...">
+3. Add an attribute filename="filename.ext" to the &lt;pre lang="..."&gt;
    snippet that you want to make downloadable.
 
 4. Adjust the design of captions with CSS via admins menu.
 
 == Frequently Asked Questions ==
 
-Q.  This plug-in does not work with WP-Syntax <some old version>!
+Q.  This plug-in does not work with WP-Syntax &lt;some old version&gt;!
 
 A.  No surprise.  This plug-in depends on WP-Syntax's internals.  Fix
     it yourself or upgrade WP-Syntax.
 
-Q.  This plug-in does not work with WP-Syntax <the latest version>!
+Q.  This plug-in does not work with WP-Syntax &lt;the latest version&gt;!
 
 A.  Bad surprise to me.  This plug-in depends on WP-Syntax's internals.
     Fix it yourself or wait until I fix it.
