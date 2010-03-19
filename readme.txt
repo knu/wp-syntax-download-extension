@@ -33,9 +33,10 @@ This plug-in was tested with PHP 5.2.12 and won't work with PHP 4.
 == Installation ==
 
 1. Upload the `wp-syntax-download-extension` directory to the
-   `/wp-content/plugins/` directory
+   `/wp-content/plugins/` directory.
 
-2. Activate the plugin through the 'Plugins' menu in WordPress
+2. Activate the plugin through the 'Plugins' menu in WordPress.  Of
+   cource you have to have WP-Syntax activated as well.
 
 3. Add an attribute `filename="filename.ext"` to the `<pre
    lang="...">` snippet that you want to make downloadable.
