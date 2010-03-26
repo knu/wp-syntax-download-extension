@@ -2,7 +2,7 @@
 Contributors: akinori-musha
 Donate link: http://akinori.org/
 Tags: Formatting, code, highlight, syntax, syntax highlighting
-Requires at least: 2.0.2
+Requires at least: 2.6.0
 Tested up to: 2.9.2
 Stable tag: 1.0.1
 
