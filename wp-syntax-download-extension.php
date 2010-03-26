@@ -264,7 +264,7 @@ function wpsde_syntax_highlight($match) {
 }
 
 function wpsde_default_css_url () {
-        return plugins_url(basename(__FILE__, ".php") . ".css", __FILE__);
+        return plugins_url(plugin_basename(__FILE__) . ".css", __FILE__);
 }
 
 function wpsde_head() {
