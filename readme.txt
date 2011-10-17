@@ -2,9 +2,9 @@
 Contributors: akinori-musha
 Donate link: http://akinori.org/
 Tags: Formatting, code, highlight, syntax, syntax highlighting
-Requires at least: 2.6.0
-Tested up to: 2.9.2
-Stable tag: 1.0.1
+Requires at least: 3.0
+Tested up to: 3.2.1
+Stable tag: 1.0.2
 
 This plug-in makes WP-Syntax highlighted code snippets downloadable from nice captions.
 
@@ -28,7 +28,8 @@ treated as valid and get preserved in the visual editor.  Add the
 
 You can alter the visual style of captions with CSS via admins menu. 
 
-This plug-in was tested with PHP 5.2.12 and won't work with PHP 4.
+This plug-in was first developed for PHP 5.2.12 and is currently
+tested only with 5.3.8.  It will never work with PHP 4.
 
 == Installation ==
 
@@ -73,6 +74,11 @@ A.  Amongst the options I am using the [WP-Syntax
 
 == Changelog ==
 
+= 1.0.2 =
+Follow the critical change made in WP-Syntax 0.9.11, which is now the
+least requirement version.  As a bonus, WordPress 3.0 or later is now
+required.
+
 = 1.0.1 =
 Do not fail when WP-Syntax is not installed or activated.
 Improve this document.
@@ -82,7 +88,7 @@ First release.
 
 == License ==
 
-Copyright (c) 2010 Akinori MUSHA
+Copyright (c) 2010, 2011 Akinori MUSHA
 
 All rights reserved.
 
