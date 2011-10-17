@@ -343,8 +343,6 @@ MESSAGE
                    ,
                    htmlspecialchars(__('Options saved.', 'wpsde')));
         } else {
-            error_log($wpsde_key);
-            error_log($wpsde_key_received);
             printf(<<< MESSAGE
 <div class="updated">
 <p><em style="color: red">%s</em></p>
