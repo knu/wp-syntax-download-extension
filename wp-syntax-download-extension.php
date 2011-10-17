@@ -135,6 +135,7 @@ function wpsde_syntax_substitute(&$match) {
 
     $lang = null;
     $line = null;
+    $highlight = null;
     $filename = null;
     $escaped = false;
     $extra_attributes = array();
@@ -151,6 +152,10 @@ function wpsde_syntax_substitute(&$match) {
             break;
         case "line":
             $line = $value;
+            $continue = true;
+            break;
+        case "highlight":
+            $highlight = $value;
             $continue = true;
             break;
         case "escaped":
@@ -181,7 +186,7 @@ function wpsde_syntax_substitute(&$match) {
 
     $html = wpsde_html_body($doc);
 
-    $wp_syntax_match = array($html, $lang, $line, "false", $code_text, $filename);
+    $wp_syntax_match = array($html, $lang, $line, "false", $highlight, $code_text, $filename);
 
     return wp_syntax_substitute($wp_syntax_match);
 }
@@ -212,7 +217,7 @@ function wpsde_syntax_highlight($match) {
     $i = intval($match[1]);
     $wp_syntax_match = $wp_syntax_matches[$i];
 
-    $filename = $wp_syntax_match[5];
+    $filename = $wp_syntax_match[6];
 
     if (is_null($filename)) {
         return $html;
