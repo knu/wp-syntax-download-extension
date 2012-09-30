@@ -14,7 +14,7 @@ Domain Path: languages
 /*
  * WP-Syntax Download Extension
  *
- * Copyright (c) 2010, 2011 Akinori MUSHA
+ * Copyright (c) 2010, 2011, 2012 Akinori MUSHA
  *
  * All rights reserved.
  *
