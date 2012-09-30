@@ -3,8 +3,8 @@ Contributors: akinori-musha
 Donate link: http://akinori.org/
 Tags: Formatting, code, highlight, syntax, syntax highlighting
 Requires at least: 3.0
-Tested up to: 3.2.1
-Stable tag: 1.0.3
+Tested up to: 3.4.2
+Stable tag: 1.0.4
 
 This plug-in makes WP-Syntax highlighted code snippets downloadable from nice captions.
 
@@ -22,7 +22,7 @@ a `<pre>` element and the snippet will have a caption.
 You can alter the visual style of captions with CSS via admins menu. 
 
 This plug-in was first developed for PHP 5.2.12 and is currently
-tested only with 5.3.8.  It will never work with PHP 4.
+tested only with 5.4.  It will never work with PHP 4.
 
 == Installation ==
 
@@ -66,6 +66,10 @@ A.  Amongst the options I am using the [WP-Syntax
 3. Admin options screen.
 
 == Changelog ==
+
+= 1.0.4 =
+Update for WP-Syntax 0.9.13, dropping support for 0.9.12 and prior.
+Take care of extended_valid_elements of TinyMCE.
 
 = 1.0.3 =
 Fix a bug where the CSS is not read.
