@@ -19,13 +19,6 @@ a permalink anchor and a couple of action buttons: "raw" and
 The usage is easy.  You just put an attibute `filename="..."` to
 a `<pre>` element and the snippet will have a caption.
 
-I strongly recommend that you use the [TinyMCE Valid
-Elements](http://wordpress.org/extend/plugins/tinymce-valid-elements/)
-plug-in to make the non-standard attributes of the `<pre>` element
-treated as valid and get preserved in the visual editor.  Add the
-`pre` element, and its attributes `class`, `dir`, `escaped`,
-`filename`, `id`, `lang`, `line`, `style`, `title`, and `wrap`.
-
 You can alter the visual style of captions with CSS via admins menu. 
 
 This plug-in was first developed for PHP 5.2.12 and is currently

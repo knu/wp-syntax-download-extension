@@ -265,6 +265,12 @@ function wpsde_syntax_highlight($match) {
     return wpsde_html_body($doc);
 }
 
+function wpsde_wp_syntax_change_mce_options($init) {
+    $init["extended_valid_elements"] = preg_replace('/((?:^|,)pre\[.*?)\]/', '$1|dir|title|wrap|filename]', $init['extended_valid_elements']);
+
+    return $init;
+}
+
 function wpsde_default_css_url () {
     return plugins_url(basename(__FILE__, '.php') . ".css", __FILE__);
 }
@@ -426,6 +432,8 @@ if (preg_match(",^/([0-9]+)/(download/)?([^/]+)$,u", $_SERVER['PATH_INFO'], $mat
         force_add_filter($filter, 'wp_syntax_before_filter', 0);
         force_add_filter($filter, 'wp_syntax_after_filter',  99);
     }
+
+    force_add_filter('tiny_mce_before_init', 'wp_syntax_change_mce_options', 99);
 
     add_action('admin_menu', 'wpsde_menu');
 }
