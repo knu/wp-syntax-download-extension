@@ -156,7 +156,7 @@ function wpsde_syntax_substitute(&$match) {
             continue 2;
         case "escaped":
             $escaped = ($value == "true");
-            break;
+            continue 2;
         case "filename":
             $filename = $value;
             break;
