@@ -143,21 +143,17 @@ function wpsde_syntax_substitute(&$match) {
     foreach ($pre->attributes as $attribute) {
         $name  = $attribute->name;
         $value = $attribute->value;
-        $continue = false;
 
         switch ($name) {
         case "lang":
             $lang = $value;
-            $continue = true;
-            break;
+            continue 2;
         case "line":
             $line = $value;
-            $continue = true;
-            break;
+            continue 2;
         case "highlight":
             $highlight = $value;
-            $continue = true;
-            break;
+            continue 2;
         case "escaped":
             $escaped = ($value == "true");
             break;
@@ -165,8 +161,6 @@ function wpsde_syntax_substitute(&$match) {
             $filename = $value;
             break;
         }
-        if ($continue)
-            continue;
         array_push($extra_attributes, $name);
     }
 
