@@ -407,21 +407,24 @@ if (preg_match(",^/([0-9]+)/(download/)?([^/]+)$,u", $_SERVER['PATH_INFO'], $mat
 
     add_action('wp_head', 'wpsde_head', 99, 0);
 
+    function force_add_filter($filter, $function, $priority) {
+        $current_priority = has_filter($filter, $function);
+        if ($current_priority === false) {
+            add_filter($filter, "wpsde_$function", $priority);
+        } else {
+            remove_filter($filter, $function, $current_priority);
+            add_filter($filter, "wpsde_$function", $current_priority);
+            add_filter($filter, $function, $current_priority);
+        }
+    }
+
+    // If WP-Syntax is loaded earlier, rehook its filters so ours come first.
+
     $filters = array('the_content', 'the_excerpt', 'comment_text');
-    $hooks = array('wp_syntax_before_filter' => 0, 'wp_syntax_after_filter' => 99);
 
     foreach ($filters as $filter) {
-        // If WP-Syntax is loaded earlier, rehook its filters so ours come first.
-        foreach ($hooks as $function => $priority) {
-            $current_priority = has_filter($filter, $function);
-            if ($current_priority === false) {
-                add_filter($filter, "wpsde_$function", $priority);
-            } else {
-                remove_filter($filter, $function, $current_priority);
-                add_filter($filter, "wpsde_$function", $current_priority);
-                add_filter($filter, $function, $current_priority);
-            }
-        }
+        force_add_filter($filter, 'wp_syntax_before_filter', 0);
+        force_add_filter($filter, 'wp_syntax_after_filter',  99);
     }
 
     add_action('admin_menu', 'wpsde_menu');
