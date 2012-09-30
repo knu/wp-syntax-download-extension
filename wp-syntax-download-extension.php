@@ -138,6 +138,7 @@ function wpsde_syntax_substitute(&$match) {
     $highlight = null;
     $filename = null;
     $escaped = false;
+    $src = null;
     $extra_attributes = array();
 
     foreach ($pre->attributes as $attribute) {
@@ -153,6 +154,9 @@ function wpsde_syntax_substitute(&$match) {
             continue 2;
         case "highlight":
             $highlight = $value;
+            continue 2;
+        case "src":
+            $src = $value;
             continue 2;
         case "escaped":
             $escaped = ($value == "true");
@@ -180,7 +184,7 @@ function wpsde_syntax_substitute(&$match) {
 
     $html = wpsde_html_body($doc);
 
-    $wp_syntax_match = array($html, $lang, $line, "false", $highlight, $code_text, $filename);
+    $wp_syntax_match = array($html, $lang, $line, "false", $highlight, $src, $code_text, $filename);
 
     return wp_syntax_substitute($wp_syntax_match);
 }
@@ -196,7 +200,7 @@ function wpsde_wp_syntax_after_filter($content) {
      * then become void since tags are gone.
      */
     return preg_replace_callback(
-        "/<p>\s*".$wp_syntax_token."(\d{3})\s*<\/p>/si",
+        '/<p>\s*' . $wp_syntax_token . '(\d{3})\s*<\/p>/si',
         "wpsde_syntax_highlight",
         $content);
 }
@@ -211,7 +215,7 @@ function wpsde_syntax_highlight($match) {
     $i = intval($match[1]);
     $wp_syntax_match = $wp_syntax_matches[$i];
 
-    $filename = $wp_syntax_match[6];
+    $filename = $wp_syntax_match[7];
 
     if (is_null($filename)) {
         return $html;
