@@ -19,8 +19,25 @@ a permalink anchor and a couple of action buttons: "raw" and
 The usage is easy.  You just put an attibute `filename="..."` to
 a `<pre>` element and the snippet will have a caption.
 
-You can alter the visual style of captions with CSS via admins menu. 
+I strongly recommend that you use the [TinyMCE Valid
+Elements](http://wordpress.org/extend/plugins/tinymce-valid-elements/)
+plug-in to make the non-standard attributes of the `<pre>` element
+treated as valid and get preserved in the visual editor.  Configure it
+so that the `pre` element can have the following attributes:
 
+*   `class`
+*   `dir`
+*   `escaped`
+*   `filename`
+*   `highlight`
+*   `id`
+*   `lang`
+*   `line`
+*   `style`
+*   `title`
+*   `wrap`
+
+You can alter the visual style of captions with CSS via admins menu.
 This plug-in was first developed for PHP 5.2.12 and is currently
 tested only with 5.4.  It will never work with PHP 4.
 
@@ -76,7 +93,7 @@ Fix a bug where the CSS is not read.
 
 = 1.0.2 =
 Follow the critical change made in WP-Syntax 0.9.11, which is now the
-least requirement version.  As a bonus, WordPress 3.0 or later is now
+least requirement version.  As a bonus, WordPress 3.0 or later is
 required.
 
 = 1.0.1 =
@@ -85,6 +102,11 @@ Improve this document.
 
 = 1.0 =
 First release.
+
+== Upgrade Notice ==
+
+= 1.0.2 =
+This version is for use with WP-Syntax 0.9.11 or higher.
 
 == License ==
 
