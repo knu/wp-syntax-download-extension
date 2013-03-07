@@ -4,7 +4,7 @@ Donate link: http://akinori.org/
 Tags: Formatting, code, highlight, syntax, syntax highlighting
 Requires at least: 3.0
 Tested up to: 3.4.2
-Stable tag: 1.0.4
+Stable tag: 1.1.0
 
 This plug-in makes WP-Syntax highlighted code snippets downloadable from nice captions.
 
@@ -83,6 +83,9 @@ A.  Amongst the options I am using the [WP-Syntax
 3. Admin options screen.
 
 == Changelog ==
+
+= 1.1.0 =
+Update for WP-Syntax 1.0, dropping support for 0.9.13 and prior.
 
 = 1.0.4 =
 Update for WP-Syntax 0.9.13, dropping support for 0.9.12 and prior.
