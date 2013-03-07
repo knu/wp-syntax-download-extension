@@ -437,3 +437,9 @@ if (preg_match(",^/([0-9]+)/(download/)?([^/]+)$,u", $_SERVER['PATH_INFO'], $mat
 
     add_action('admin_menu', 'wpsde_menu');
 }
+
+// Local Variables:
+// mode: php
+// c-basic-offset: 4
+// indent-tabs-mode: nil
+// End:
