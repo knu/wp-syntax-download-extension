@@ -108,12 +108,12 @@ First release.
 
 == Upgrade Notice ==
 
-= 1.0.2 =
-This version is for use with WP-Syntax 0.9.11 or higher.
+= 1.1.0 =
+This version is for use with WP-Syntax 1.0 or higher.
 
 == License ==
 
-Copyright (c) 2010, 2011, 2012 Akinori MUSHA
+Copyright (c) 2010, 2011, 2012, 2013 Akinori MUSHA
 
 All rights reserved.
 
