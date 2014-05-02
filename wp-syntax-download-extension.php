@@ -42,6 +42,9 @@ Domain Path: languages
 
 class WP_Syntax_DownloadExtention {
     public static function process_download_request($postid, $filename, $download_p) {
+        // Suppress W3TC comment
+        add_filter('w3tc_can_print_comment', array(__CLASS__, 'returnFalse'));
+
         if (preg_match("/[\\r\\n]/u", $filename)) {
             header('HTTP', true, 400);
             header('Content-Type: text/plain; charset=UTF-8');
@@ -403,6 +406,10 @@ FORM
 </div>
 FOOTER
             );
+    }
+
+    public static function returnFalse($value) {
+        return false;
     }
 
     public static function setup() {
