@@ -77,7 +77,8 @@ class WP_Syntax_DownloadExtention {
         if ($download_p) {
             header('Content-Type: application/octet-stream');
             header(sprintf('Content-Disposition: attachment; filename="%s"',
-                           preg_replace("/\"/u", "\\\"", $filename)));
+                           preg_replace("/\"/u", "\\\"",
+                                        preg_replace("/^.*\//u", "", $filename))));
         } else {
             header('Content-Type: text/plain; charset=UTF-8');
         }
@@ -434,7 +435,7 @@ FOOTER
     }
 }
 
-if (preg_match(",^/([0-9]+)/(download/)?([^/]+)$,u", $_SERVER['PATH_INFO'], $matches)) {
+if (preg_match(",^/([0-9]+)/(download/)?(.+)$,u", $_SERVER['PATH_INFO'], $matches)) {
     // This require() cannot be put in a function because of variable scopes.
     require(dirname(__FILE__) . '/../../../wp-load.php');
     WP_Syntax_DownloadExtention::process_download_request($matches[1], urldecode($matches[3]), !empty($matches[2]));
