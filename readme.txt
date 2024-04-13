@@ -4,7 +4,7 @@ Donate link: http://akinori.org/
 Tags: Formatting, code, highlight, syntax, syntax highlighting
 Requires at least: 3.0
 Tested up to: 3.4.2
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 
 This plug-in makes WP-Syntax highlighted code snippets downloadable from nice captions.
 
@@ -84,6 +84,9 @@ A.  Amongst the options I am using the [WP-Syntax
 
 == Changelog ==
 
+= 1.1.2 =
+Fix a fatal error and suppress a warning with PHP 8.
+
 = 1.1.1 =
 Add support for a file name with directory separators.
 Automatically suppress W3TC comments in raw/download output.
@@ -117,7 +120,7 @@ This version is for use with WP-Syntax 1.0 or higher.
 
 == License ==
 
-Copyright (c) 2010, 2011, 2012, 2013, 2014 Akinori MUSHA
+Copyright (c) 2010-2024 Akinori MUSHA
 
 All rights reserved.
 

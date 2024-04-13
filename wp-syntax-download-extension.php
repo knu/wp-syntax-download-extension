@@ -3,7 +3,7 @@
 Plugin Name: WP-Syntax Download Extension
 Plugin URI: http://wordpress.org/extend/plugins/wp-syntax-download-extension
 Description:  Make WP-Syntax highlighted code snippets downloadable.
-Version: 1.1.1
+Version: 1.1.2
 Author: Akinori MUSHA
 Author URI: http://akinori.org/
 License: New BSD Licence
