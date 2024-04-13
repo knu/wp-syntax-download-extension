@@ -90,8 +90,9 @@ class WP_Syntax_DownloadExtention {
     }
 
     public static function html_documentize($html) {
+        $doc = new DOMDocument();
         // loadHTML() defaults the encoding to iso-8859-1!
-        $doc = DOMDocument::loadHTML(<<< HTML
+        $doc->loadHTML(<<< HTML
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
