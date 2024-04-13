@@ -1,17 +1,17 @@
 === WP-Syntax Download Extension ===
 Contributors: akinori-musha
-Donate link: http://akinori.org/
+Donate link: https://github.com/knu
 Tags: Formatting, code, highlight, syntax, syntax highlighting
 Requires at least: 3.0
 Tested up to: 3.4.2
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 
 This plug-in makes WP-Syntax highlighted code snippets downloadable from nice captions.
 
 == Description ==
 
 This plug-in adds download facility to
-[WP-Syntax](http://wordpress.org/extend/plugins/wp-syntax/), putting a
+[WP-Syntax](https://wordpress.org/extend/plugins/wp-syntax/), putting a
 pretty caption to each syntax highlighted code snippet, which contains
 a permalink anchor and a couple of action buttons: "raw" and
 "download".
@@ -20,7 +20,7 @@ The usage is easy.  You just put an attibute `filename="..."` to
 a `<pre>` element and the snippet will have a caption.
 
 I strongly recommend that you use the [TinyMCE Valid
-Elements](http://wordpress.org/extend/plugins/tinymce-valid-elements/)
+Elements](https://wordpress.org/extend/plugins/tinymce-valid-elements/)
 plug-in to make the non-standard attributes of the `<pre>` element
 treated as valid and get preserved in the visual editor.  Configure it
 so that the `pre` element can have the following attributes:
@@ -71,7 +71,7 @@ A.  Bad surprise to me.  This plug-in depends on WP-Syntax's internals.
 Q.  How do you customize the styles of the code?
 
 A.  Amongst the options I am using the [WP-Syntax
-    Hacktify](http://wordpress.org/extend/plugins/wp-syntax-hacktify/)
+    Hacktify](https://wordpress.org/extend/plugins/wp-syntax-hacktify/)
     plug-in.
 
 == Screenshots ==
@@ -84,7 +84,7 @@ A.  Amongst the options I am using the [WP-Syntax
 
 == Changelog ==
 
-= 1.1.2 =
+= 1.1.3 =
 Fix a fatal error and suppress a warning with PHP 8.
 
 = 1.1.1 =

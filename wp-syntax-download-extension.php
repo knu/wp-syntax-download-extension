@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: WP-Syntax Download Extension
-Plugin URI: http://wordpress.org/extend/plugins/wp-syntax-download-extension
+Plugin URI: https://wordpress.org/extend/plugins/wp-syntax-download-extension
 Description:  Make WP-Syntax highlighted code snippets downloadable.
-Version: 1.1.2
+Version: 1.1.3
 Author: Akinori MUSHA
-Author URI: http://akinori.org/
+Author URI: https://akinori.org/
 License: New BSD Licence
 Text Domain: wpsde
 Domain Path: languages
@@ -14,7 +14,7 @@ Domain Path: languages
 /*
  * WP-Syntax Download Extension
  *
- * Copyright (c) 2010, 2011, 2012, 2013, 2014 Akinori MUSHA
+ * Copyright (c) 2010-2024 Akinori MUSHA
  *
  * All rights reserved.
  *
